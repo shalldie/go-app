@@ -1,12 +1,6 @@
 <template>
     <ul class="info-list">
-        <li>---</li>
-        <li>---</li>
-        <li>---</li>
         <li :class="{active:i==index}" v-for="(item,i) in list">{{item}}</li>
-        <li>---</li>
-        <li>---</li>
-        <li>---</li>
     </ul>
 </template>
 
@@ -43,9 +37,10 @@ export default {
         getSelected() {
             let nowTop = this.$el.scrollTop;
             let allTop = this.$el.scrollHeight;
-            this.index = ~~(nowTop / allTop) * this.list.length;
-            console.log(this.index);
-            console.log(nowTop, allTop, this.list.length);
+            // this.index = ~~((nowTop / allTop) * this.list.length);
+            this.index = ~~((nowTop - 240 + 490) / 80) - 3;
+
+            console.log(nowTop, allTop, this.index);
         }
     }
 };
@@ -54,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 .info-list {
     margin: 0;
-    padding: 0;
+    padding: 240px 0;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
