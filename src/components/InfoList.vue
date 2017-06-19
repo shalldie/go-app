@@ -37,7 +37,6 @@ export default {
         getSelected() {
             let nowTop = this.$el.scrollTop;
             let allTop = this.$el.scrollHeight;
-            // this.index = ~~((nowTop / allTop) * this.list.length);
             this.index = ~~((nowTop - 240 + 490) / 80) - 3;
 
             console.log(nowTop, allTop, this.index);
