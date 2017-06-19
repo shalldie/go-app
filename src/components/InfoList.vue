@@ -38,7 +38,6 @@ export default {
             let nowTop = this.$el.scrollTop;
             let allTop = this.$el.scrollHeight;
             this.index = ~~((nowTop - 240 + 490) / 80) - 3;
-
             console.log(nowTop, allTop, this.index);
         }
     }
