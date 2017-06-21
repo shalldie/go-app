@@ -1,6 +1,6 @@
 <template>
     <ul @touchstart="onTouchStart" @touchmove="onTouchMove" class="select-list">
-        <li class="select-list-item"></li>
+        <li v-for="(item,index) in list" class="select-list-item"></li>
     </ul>
 </template>
 
