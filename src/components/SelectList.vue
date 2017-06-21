@@ -1,5 +1,5 @@
 <template>
-    <ul @touchmove="onTouchMove" class="select-list">
+    <ul @touchstart="onTouchStart" @touchmove="onTouchMove" class="select-list">
         <li class="select-list-item"></li>
     </ul>
 </template>
