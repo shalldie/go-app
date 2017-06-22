@@ -1,13 +1,13 @@
 <template>
     <div id="app">
-        <info-list class="col-4" :list="list"></info-list>
-        <info-list class="col-4" :list="list"></info-list>
-        <info-list class="col-4" :list="list"></info-list>
+        <select-confirm></select-confirm>
     </div>
 </template>
 
 <script>
-import InfoList from './components/InfoList';
+// import InfoList from './components/InfoList';
+// import SelectList from './components/SelectList';
+import SelectConfirm from './components/SelectConfirm';
 
 let arr = Array.apply(null, Array(30)).map((item, index) => (index + 10).toString().repeat(4));
 
@@ -19,7 +19,7 @@ export default {
         };
     },
     components: {
-        InfoList
+        SelectConfirm
     }
 }
 </script>
