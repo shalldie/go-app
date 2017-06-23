@@ -1,6 +1,6 @@
 <template>
     <ul @touchstart="onTouchStart" @touchmove="onTouchMove" class="select-list">
-        <li v-for="(item,index) in list" class="select-list-item">{{item}}</li>
+        <li v-for="(item,index) in list" class="select-list-item" :key="index">{{item}}</li>
     </ul>
 </template>
 
@@ -48,7 +48,7 @@ export default {
             let timeSpan = Math.abs(~~(speed / downSpeed));  // 缓动耗费时间
             let distance = ~~(speed / 2) * timeSpan; // 缓动移动距离， 平均速度*时间
             this.$el.style.transition = `transform ${timeSpan}ms`;
-            this.$el.style.transform = ``;
+            this.$el.style.transform = `translate3d(0,${0}px,0)`;
         }
     }
 }
