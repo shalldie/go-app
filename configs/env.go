@@ -2,7 +2,7 @@ package configs
 
 import (
 	"fmt"
-	"log"
+	"os"
 	"sync"
 
 	"github.com/caarlos0/env/v6"
@@ -20,6 +20,9 @@ func LoadEnv() *envConfig {
 	lock.Lock()
 	defer lock.Unlock()
 
+	s, _ := os.Getwd()
+	fmt.Println(s)
+
 	if config != nil {
 		return config
 	}
@@ -27,7 +30,7 @@ func LoadEnv() *envConfig {
 	err := godotenv.Load()
 
 	if err != nil {
-		log.Print("there is no .env")
+		fmt.Println(err)
 	}
 
 	config = &envConfig{}
