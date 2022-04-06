@@ -1,7 +1,7 @@
-package pkg
+package api
 
 import (
-	"go-app/pkg/tianqi"
+	"go-app/api/tianqi"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
